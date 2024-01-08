@@ -15,6 +15,12 @@ public class RegExExample {
 		else
 			System.out.println("Invalid First Name");
 		
+		String lastName="Fatma";
+		Matcher matcher2=pattern.matcher(lastName);
+		if (matcher2.matches()==true)
+			System.out.println("Valid Last Name");
+		else
+			System.out.println("Invalid Last Name");
 	}
 	
 }
