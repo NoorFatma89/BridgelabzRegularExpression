@@ -33,6 +33,16 @@ public class RegExExample {
 			System.out.println("Valid Email");
 		else
 			System.out.println("Invalid Email");
+		
+		//UC4-Checking mobile number is valid or not
+		String regularExp4="^\\d{2} \\d{10}$";
+		String mobNumber= "91 8989898989"; 
+		Pattern pattern4=Pattern.compile(regularExp4);
+		Matcher matcher4=pattern4.matcher(mobNumber);
+		if(matcher4.matches()==true)
+			System.out.println("Mobile Number is valid");
+		else
+			System.out.println("Mobile Number is not valid");
 	}
 	
 }
