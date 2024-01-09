@@ -73,6 +73,18 @@ public class RegExExample {
 			System.out.println("Password is valid according to Rule 1,Rule 2 and Rule 3");
 		else
 			System.out.println("Password is not valid according to Rule 1,Rule 2 and Rule 3");
+
+		
+		//UC8-Verifying Password according to Rule 1,Rule 2,Rule 3 and Rule4
+		String regularExp8 = "^(?=.*[A-Z])(?=.*\\d)(?=.*[@#$%^&+=!]).{8,}$";         //(?=.*[@#$%^&+=!]): Positive lookahead assertion
+		String passwordRule4="asdfgdf4=+H8jk";
+		Pattern pattern8=Pattern.compile(regularExp8);
+		Matcher matcher8=pattern8.matcher(passwordRule4);
+		if(matcher8.matches()==true)
+			System.out.println("Password is valid according to Rule 1,Rule 2,Rule 3 and Rule4");
+		else
+			System.out.println("Password is not valid according to Rule 1,Rule 2,Rule 3 and Rule4");
+		
 	}
 	
 }
