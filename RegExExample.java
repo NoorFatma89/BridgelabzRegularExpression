@@ -6,6 +6,7 @@ public class RegExExample {
 	
 	public static void main(String args[]) {
 		
+		//UC1-Checking FirstName is valid or not
 		String regularExp="^[A-Z][A-Za-z]{2,}$";
 		String firstName="Noor";
 		Pattern pattern=Pattern.compile(regularExp);
@@ -15,12 +16,23 @@ public class RegExExample {
 		else
 			System.out.println("Invalid First Name");
 		
+		//UC2-Checking LastName is valid or not
 		String lastName="Fatma";
 		Matcher matcher2=pattern.matcher(lastName);
 		if (matcher2.matches()==true)
 			System.out.println("Valid Last Name");
 		else
 			System.out.println("Invalid Last Name");
+		
+		//UC3-Checking email is valid or not
+		String regularExp2="^[a-zA-Z0-9]+([.][a-zA-Z0-9]+)*@[a-zA-Z]+([.][a-zA-Z]+)+$";
+		String email="abc.xyz@bl.co.in";
+		Pattern pattern3=Pattern.compile(regularExp2);
+		Matcher matcher3=pattern3.matcher(email);
+		if (matcher3.matches()==true)
+			System.out.println("Valid Email");
+		else
+			System.out.println("Invalid Email");
 	}
 	
 }
