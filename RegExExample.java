@@ -43,6 +43,17 @@ public class RegExExample {
 			System.out.println("Mobile Number is valid");
 		else
 			System.out.println("Mobile Number is not valid");
+		
+		//UC5-Verifying Password according to Rule 1
+		String regularExp5="^.{8,}$";
+		String passwordRule1="asdfghjkhgfh";
+		Pattern pattern5=Pattern.compile(regularExp5);
+		Matcher matcher5=pattern5.matcher(passwordRule1);
+		if(matcher5.matches()==true)
+			System.out.println("Password is valid according to Rule 1");
+		else
+			System.out.println("Password is not valid according to Rule 1");
+		
 	}
 	
 }
